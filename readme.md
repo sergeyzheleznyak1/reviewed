@@ -1,23 +1,24 @@
 # Reviewed
 
-- HTML,
-- SCSS,
-- Gulp,
-- JS
+-HTML,
+-SCSS,
+-Gulp,
+-JS,
+-Accessibility,
+-BEM,
+-Responsiveness (Desktop-first and Mobile-first approaches)
 
-Документация и примеры использования внутри.
-
-Установить зависимости:
+Install dependencies:
 ```
 npm i
 ```
 
-Зпустить в режиме разработки:
+Run in development mode:
 ```
 gulp
 ```
 
-Собрать версию для публикации:
+Build for production:
 ```
 gulp docs
 ```
