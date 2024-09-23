@@ -1,0 +1,28 @@
+.cross-button {
+    @include square(40px);
+  
+    position: relative;
+    border-radius: var(--border-radius-small);
+  
+  
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 50%;
+        height: 2px;
+        background-color: var(--color-zinc-950);
+        border-radius: 5px;
+    }
+  
+    &::before {
+        rotate: 45deg;
+    }
+  
+    &::after {
+        rotate: -45deg;
+    }
+}

@@ -1,0 +1,155 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.06em;
+	color: var(--color-zinc-50);
+	background-color: var(--color-zinc-950);
+
+	h2 {
+		font-size: 14px;
+		line-height: 1.4;
+		font-weight: 600;
+		color: var(--color-yellow-500);
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__inner {
+		padding: 40px 0 36px 0;
+		display: flex;
+		column-gap: 20px;
+
+		@include tablet-s {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: 
+			"info courses"
+			"social company";
+			gap: 24px;
+		}
+
+		@include mobile {
+			grid-template-areas: 
+			"info info"
+			"courses company"
+			"social social";
+		}
+	}
+
+	&-list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+	}
+
+	&__info {
+		grid-area: info;
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+		max-width: 404px;
+		width: 100%;
+	}
+
+	&__contact {
+
+		&-body {
+			display: flex;
+			flex-direction: column;
+			row-gap: 8px;
+			
+			a {
+				display: flex;
+				align-items: center;
+				column-gap: 8px;
+
+				svg {
+					@include hover {
+						color: var(--color-yellow-500)
+					}
+				}
+
+				@include hover {
+					color: var(--color-yellow-500);
+				}
+			}
+		}
+	}
+
+	&__courses {
+		grid-area: courses;
+		max-width: 298px;
+		width: 100%;
+
+		&-link {
+			@include hover {
+				color: var(--color-yellow-500)
+			}
+		}
+	}
+
+	&__company {
+		grid-area: company;
+		max-width: 298px;
+		width: 100%;
+
+		&-link {
+			@include hover {
+				color: var(--color-yellow-500)
+			}
+		}
+	}
+
+	&__soc1al-other {
+		grid-area: social;
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+		max-width: 192px;
+		width: 100%;
+	}
+
+	&__soc1al-icons-list {
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+	}
+
+	&__soc1al-icon-link {
+		svg {
+			@include hover {
+				color: var(--color-yellow-500);
+			}
+		}
+	}
+
+	&__other {
+		&-item {
+			&:last-child {
+				font-size: 14px;
+				letter-spacing: normal;
+			}
+		}
+
+		&-link {
+			@include hover {
+				color: var(--color-yellow-500)
+			}
+		}
+	}
+
+	&__extra {
+		padding: 9px;
+		font-size: 14px;
+		line-height: 1.4;
+		color: var(--color-zinc-50);
+		text-align: center;
+		opacity: 80%;
+	}
+}
+

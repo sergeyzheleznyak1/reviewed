@@ -1,0 +1,98 @@
+<section class="hero container">
+    <div class="hero__inner">
+        <div class="hero__main">
+            <div class="hero__body">
+                <h1 class="hero__title">Тільки перевірені відгуки про <span>компанії або курси</span></h1>
+                <div class="hero__descr">
+                    <p>Ви також можете надіслати свій власний відгук про компанію чи курс. Коли ми впевнимось в дійсності Вашої особи, ми його опублікуємо.</p>
+                </div> 
+            </div>
+            <img src="../../img/hero-img.jpg" alt="Жінка працює за ноутбуком у світлому інтер'єрі" class="hero__img" width="602" height="475" loading="lazy" />
+        </div>
+        <search role="search" class="hero__search-panel search">
+            <form class="search-panel">
+                <div class="search-panel__inner">
+                    <div class="search-panel__el">
+                        <div class="search-panel__wrapper-input" id="inputSearch">
+                            <input type="search" class="search-panel__input" placeholder="Введіть запит"/>
+                        </div>
+                        <div class="custom-select" id="selectCompany">
+                            <button class="custom-select__button"
+                            role="combobox"
+                            aria-label="select button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="select-dropdown" type="button">
+                                <span class="custom-select__value">Компанії</span>
+                                <span class="custom-select__arrow">
+                                    <img src="../../img/icons/arrow-down.svg" alt="">
+                                </span>
+                            </button>
+                            <ul class="custom-select__dropdown"
+                            role="listbox" id="select-dropdown">
+                                <li role="option">
+                                    <label for="1">Компанії</label>
+                                    <input type="radio" id="1" name="company" class="visually-hidden"/>
+                                </li>
+                                <li role="option">
+                                    <label for="2">Курси</label>
+                                    <input type="radio" id="2" name="courses" class="visually-hidden"/>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="custom-select" id="selectLocation">
+                            <button class="custom-select__button"
+                            role="combobox"
+                            aria-label="select button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="select-dropdown" type="button">
+                                <span class="custom-select__value ">Всі локації</span>
+                                <span class="custom-select__arrow">
+                                    <img src="../../img/icons/arrow-down.svg" alt="">
+                                </span>
+                            </button>
+                            <ul class="custom-select__dropdown"
+                            role="listbox" id="select-dropdown">
+                                <li role="option">
+                                    <label for="3">Компанії</label>
+                                    <input type="radio" id="3" name="social-account" class="visually-hidden"/>
+                                </li>
+                                <li role="option">
+                                    <label for="4">Курси</label>
+                                    <input type="radio" id="4" name="social-account" class="visually-hidden"/>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="custom-select" id="selectAllCompany">
+                            <button class="custom-select__button"
+                            role="combobox"
+                            aria-label="select button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="select-dropdown" type="button">
+                                <span class="custom-select__value ">Всі компанії</span>
+                                <span class="custom-select__arrow">
+                                    <img src="../../img/icons/arrow-down.svg" alt="">
+                                </span>
+                            </button>
+                            <ul class="custom-select__dropdown"
+                            role="listbox" id="select-dropdown">
+                                <li role="option">
+                                    <label for="5">Компанії</label>
+                                    <input type="radio" id="5" name="social-account" class="visually-hidden"/>
+                                </li>
+                                <li role="option">
+                                    <label for="6">Курси</label>
+                                    <input type="radio" id="6" name="social-account" class="visually-hidden"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="search-panel__button button button--color-2">Знайти</button>
+            </form>
+        </search>
+    </div>
+    
+</section>

@@ -1,0 +1,56 @@
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    padding: 20px var(--container-padding-x);
+    background-color: var(--color-white);
+    translate: 0 -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: translate var(--transition-duration) cubic-bezier(0.165, 0.84, 0.44, 1), visibility var(--transition-duration) cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1000;
+
+    &--open {
+        visibility: visible;
+        opacity: 1;
+        translate: 0 0;
+    }
+
+    &__body {
+        padding-block: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 40px);
+    }
+
+    &__search-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__close-button-wrapper {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__list {
+        @include flex-center;
+
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+    }
+
+    &__button {
+        padding: 12px 20px;
+        width: 100%;
+        height: 44px;
+        border-color: var(--color-zinc-950)
+    }
+}

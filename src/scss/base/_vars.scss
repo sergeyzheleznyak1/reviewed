@@ -1,0 +1,55 @@
+:root {
+	--color-yellow-50: #FFFEE7;
+	--color-yellow-100: #FFFFC1;
+	--color-yellow-200: #FFFC87;
+	--color-yellow-300: #FFF342;
+	--color-yellow-400: #FFE40F;
+	--color-yellow-500: #FDD503;
+	--color-yellow-600: #FDD503;
+	--color-yellow-700: #A57103;
+	--color-yellow-800: #88570B;
+	--color-yellow-900: #74470F;
+	--color-yellow-950: #442504;
+
+	--color-zinc-50: #FAFAFA;
+	--color-zinc-100: #F4F4F5;
+	--color-zinc-200: #E4E4E7;
+	--color-zinc-300: #D4D4D8;
+	--color-zinc-400: #A1A1AA;
+	--color-zinc-500: #71717A;
+	--color-zinc-600: #52525B;
+	--color-zinc-700: #3F3F46;
+	--color-zinc-800: #3F3F46;
+	--color-zinc-900: #3F3F46;
+	--color-zinc-950: #09090B;
+
+	--color-white: #FFFFFF;
+	--color-error: #E22138;
+	--color-green: #339D5D;
+	--color-blue: #0A66C2;
+
+	--container-width: 1282px;
+	--container-padding-x: 15px;
+
+	--section-padding-y: 40px;
+
+	--font-family-base: 'OpenSans', sans-serif;
+	--font-family-accent: 'Roboto', sans-serif;
+
+	--border-radius-small: 8px;
+	--border-radius-medium: 12px;
+	--border-radius-large: 16px;
+	--border-radius-extra-large: 40px;
+
+	--input-height: 58px;
+
+	--shadow-1: 2px 2px 12px 0 rgba(0, 0, 0, 0.1);
+	--shadow-2: 2px 2px 12px 0 rgba(165, 113, 3, 0.25);
+	--shadow-3: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+	--transition-duration: 0.2s;
+
+	@include tablet-s {
+		--section-padding-y: 32px;
+	}
+}

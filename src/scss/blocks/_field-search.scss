@@ -1,0 +1,17 @@
+.field-search {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        background-image: url('../../img/icons/search-normal.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 16px;
+        aspect-ratio: 1;
+        pointer-events: none;
+    }
+}

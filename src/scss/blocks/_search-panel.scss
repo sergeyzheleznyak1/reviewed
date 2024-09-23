@@ -1,0 +1,126 @@
+.search-panel {
+    padding: 0 4px 0 8px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--color-zinc-500);
+    border-radius: inherit;
+    background-color: var(--color-white);
+
+    @include tablet-s {
+        padding: 16px;
+        grid-template-columns: 1fr;
+    }
+
+    &__el {
+        display: grid;
+        grid-template-columns: 1fr 218px 218px 1fr;
+
+        @include desktop {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "inputSearch selectCompany selectLocation selectAllCompany";
+        }
+
+        @include tablet-s {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "inputSearch inputSearch"
+                "selectCompany selectLocation"
+                "selectAllCompany selectAllCompany";
+
+            #inputSearch {
+                grid-area: inputSearch;
+            }
+
+            #selectCompany {
+                grid-area: selectCompany;
+                position: relative;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 1px;
+                    height: 42px;
+                    background-color: var(--color-zinc-500);
+                    transform: translateY(-50%);
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+            }
+
+            #selectLocation {
+                grid-area: selectLocation;
+            }
+
+            #selectAllCompany {
+                grid-area: selectAllCompany;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas: "inputSearch"
+            "selectCompany" 
+            "selectLocation"
+            "selectAllCompany";
+        }
+    }
+
+    &__el > *:not(:last-child) {
+        border-right: 1px solid var(--color-zinc-500);
+
+        @include tablet-s {
+            border-right: none;
+        }
+    }
+
+    &__el > * {
+        @include tablet-s {
+            border-bottom: 1px solid var(--color-zinc-500);
+        }
+    }
+
+    &__wrapper-input {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            background-image: url('../../img/icons/search-normal.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 23px;
+            aspect-ratio: 1;
+            pointer-events: none;
+        }
+    }
+
+    &__input {
+        padding: 20px 20px 16px 48px;
+        border-radius: var(--border-radius-extra-large) 0 0 var(--border-radius-extra-large);
+        width: 100%;
+        height: 100%;
+
+        @include tablet-s {
+            border-radius: var(--border-radius-extra-large) var(--border-radius-extra-large) 0 0;
+        }
+
+        &::placeholder {
+            font-size: 20px;
+            line-height: 1.3;
+        }
+    }
+
+    &__button {
+        height: 51px;
+    }
+}

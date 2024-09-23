@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Reviewed</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="content">
+		@@include('blocks/hero.html')
+		@@include('blocks/top-company.html')
+		@@include('blocks/new-courses.html')
+		@@include('blocks/top-courses.html')
+		@@include('blocks/add-company.html')
+		@@include('blocks/faq.html')
+	</main>
+	@@include('blocks/footer.html')
+	<div class="mobile-overlay visible-mobile" id="mobileOverlay" role="dialog" aria-hidden="true">
+		<div class="mobile-overlay__close-button-wrapper">
+			<button class="mobile-overlay__close-button cross-button" type="button" id="closeMobileMenuBtn">
+				<span class="visually-hidden">Close navigation menu</span>
+			</button>
+		</div>
+		<div class="mobile-overlay__body">
+			<div class="mobile-overlay__search-list">
+				<search class="mobile-overlay__search" role="search">
+					<form class="mobile-overlay__search-form">
+						<div class="field-search">
+							<input name="search" id="search" type="search" placeholder="Пошук" class="header__search-input field-search__input">
+						</div>
+					</form>
+				</search>
+				<ul class="mobile-overlay__list">
+					<li class="mobile-overlay__item">
+						<a class="mobile-overlay__link" href="#!">Курси</a>
+					</li>
+					<li class="mobile-overlay__item">
+						<a class="mobile-overlay__link" href="#!">Компанії</a>
+					</li>
+				</ul>
+			</div>
+			<a href="#!" class="mobile-overlay__button button-transparent">Вхід</a>
+		</div>
+	</div>
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

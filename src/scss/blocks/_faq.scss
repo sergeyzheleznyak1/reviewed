@@ -1,0 +1,96 @@
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--section-padding-y);
+
+    &__list {
+        --grid-columns: 2;
+        
+        width: 100%;
+
+        @include tablet-s {
+            --grid-columns: 1;
+
+            max-width: 672px;
+        }
+    }
+
+    &__accordion {
+        --indicator-vertical-rotate: 90deg;
+        --color-icon: currentColor;
+        --white-space: nowrap;
+        --webkit-line-clamp: 1;
+        --bg-header: var(--color-zinc-200);
+
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-medium);
+
+        &[open] {
+            --indicator-vertical-rotate: 0;
+            --color-icon: var(--color-yellow-700);
+            --white-space: normal;
+            --webkit-line-clamp: auto;
+            --bg-header: var(--color-zinc-300);
+        }
+
+        &-header {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            column-gap: 20px;
+            background-color: var(--bg-header);
+            border-radius: var(--border-radius-medium);
+            transition-duration: var(--transition-duration);
+            cursor: pointer;
+            user-select: none;
+
+            @include hover {
+                background-color: var(--color-zinc-300);
+            }
+        }
+
+        &-indicator {
+            @include flex-center;
+            @include square(24px);
+
+            flex-shrink: 0;
+            position: relative;
+
+            &::before,
+            &::after {
+                @include abs-center;
+
+                content: '';
+                width: 50%;
+                height: 4.17%;
+                background-color: var(--color-icon);
+                border-radius: var(--border-radius-extra-large);
+            }
+
+            &::after {
+                rotate: var(--indicator-vertical-rotate);
+            }
+        }
+
+        &-title {
+            max-width: 520px;
+            white-space: var(--white-space);
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            @include desktop {
+                max-width: 100%;
+                display: -webkit-box;
+                -webkit-line-clamp: var(--webkit-line-clamp);
+                white-space: normal;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        &-body {
+            padding: 20px 24px;
+        }
+    }
+}

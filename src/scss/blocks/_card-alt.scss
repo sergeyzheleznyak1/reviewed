@@ -1,0 +1,77 @@
+.card-alt {
+    --card-margin-x: 24px;
+
+    position: relative;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: var(--card-margin-x);
+    border-radius: var(--border-radius-medium);
+    transition-duration: var(--transition-duration);
+
+    @include desktop {
+        padding: 23px;
+    }
+
+    &--hover-1 {
+        @include hover {
+            background-color: var(--color-zinc-200);
+        }
+    }
+
+    &__feedback {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 20px;
+        font-size: 14px;
+        line-height: 1.4;
+
+        @include desktop {
+            align-items: start;
+        }
+    }
+
+    &__reviews {
+        color: var(--color-zinc-600);
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+
+        @include desktop {
+            flex-direction: column;
+            row-gap: 4px;
+            align-items: end;
+        }
+
+        @include tablet-b {
+            flex-direction: row;
+        }
+
+        &-stars {
+            display: flex;
+            align-items: center;
+            column-gap: 2px;
+        }
+
+        &-grade {
+            font-weight: 600;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: var(--card-margin-x);
+    }
+
+    &__link {
+        position: absolute;
+        inset: 0;
+    }
+}

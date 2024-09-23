@@ -1,0 +1,95 @@
+html {
+	scroll-behavior: smooth;
+	background-color: var(--color-zinc-50);
+}
+
+body {
+	font-family: var(--font-family-base);
+	font-size: 16px;
+	color: var(--color-zinc-950);
+	background-color: var(--color-zinc-50);
+	// text-wrap: balance;
+}
+
+a {
+	color: inherit;
+}
+
+svg *[fill] { fill: currentColor }
+svg *[stroke] { stroke: currentColor }
+
+svg * {
+	transition-property: fill, stroke;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+h1, h2, h3, h4 { 
+	line-height: 1.3; 
+
+	span {
+		color: var(--color-yellow-500);
+	}
+}
+
+h1, .h1 {
+	@include fluid-text(48, 32);
+
+	font-weight: 700;
+}
+
+h2, .h2 {
+	@include fluid-text(36, 24);
+
+	font-weight: 700
+}
+
+h3, .h3 {
+	font-size: 28px;
+	font-weight: 700
+}
+
+h4, .h4 {
+	@include fluid-text(20, 18);
+
+	font-weight: 600
+}
+
+p { line-height: 1.4; }
+
+input {
+	background-color: var(--color-white);
+
+	&::placeholder {
+		color: var(--color-zinc-400);
+	}
+
+	&:focus {
+		border-color: var(--color-zinc-600);
+	}
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	appearance: none;
+}
+  
+input[type="search"] {
+	-moz-appearance: textfield;
+}
+  
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+select {
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+}

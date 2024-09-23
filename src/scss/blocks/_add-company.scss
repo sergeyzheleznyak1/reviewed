@@ -1,0 +1,38 @@
+.add-company {
+    padding: 106px;
+    display: flex;
+    column-gap: 20px;
+    background-color: var(--color-zinc-100);
+    border-radius: var(--border-radius-extra-large);
+
+    @include tablet-s {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    @include mobile {
+        padding: var(--section-padding-y) 20px;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+
+        @include tablet-s {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        @include tablet-s {
+            font-size: 32px;
+        }
+    }
+
+    &__descr {
+        text-wrap: balance;
+    }
+}

@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reviewed</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header__inner container">
+				<div class="header__top-panel">
+					<a href="/" class="header__logo">
+						<img src="./img/logo.svg" class="logo__image" alt="Reviewed" width="174" height="36" loading="lazy" />
+					</a>
+					<search class="header__search hidden-mobile" role="search">
+						<form class="header__search-form">
+							<div class="field-search">
+								<input name="search" id="search" type="search" placeholder="Пошук" class="header__search-input field-search__input" />
+							</div>
+						</form>
+					</search>
+				</div>
+				<a href="#" class="header__login-button button-transparent hidden-mobile">Вхід</a>
+				<button class="header__burger-button burger-button visible-mobile" type="button" id="openMobileMenuBtn">
+					<span class="visually-hidden">Open navigation menu</span>
+				</button>
+			</div>
+		</header>
+		<main class="content">
+			<section class="hero container">
+				<div class="hero__inner">
+					<div class="hero__main">
+						<div class="hero__body">
+							<h1 class="hero__title">Тільки перевірені відгуки про <span>компанії або курси</span></h1>
+							<div class="hero__descr">
+								<p>
+									Ви&#160;також можете надіслати свій власний відгук про компанію чи&#160;курс. Коли ми&#160;впевнимось в&#160;дійсності Вашої особи, ми&#160;його
+									опублікуємо.
+								</p>
+							</div>
+						</div>
+						<picture>
+							<source srcset="./img/hero-img.webp 1x, ./img/hero-img@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/hero-img.jpg 1x, ./img/hero-img@2x.jpg 2x" type="image/jpeg" />
+							<img src="./img/hero-img.jpg" alt="Жінка працює за ноутбуком у світлому інтер'єрі" class="hero__img" width="602" height="475" loading="lazy" />
+						</picture>
+					</div>
+					<search role="search" class="hero__search-panel search">
+						<form class="search-panel">
+							<div class="search-panel__inner">
+								<div class="search-panel__el">
+									<div class="search-panel__wrapper-input" id="inputSearch">
+										<input type="search" class="search-panel__input" placeholder="Введіть запит" />
+									</div>
+									<div class="custom-select" id="selectCompany">
+										<button
+											class="custom-select__button"
+											role="combobox"
+											aria-label="select button"
+											aria-haspopup="listbox"
+											aria-expanded="false"
+											aria-controls="select-dropdown"
+											type="button"
+										>
+											<span class="custom-select__value">Компанії</span>
+											<span class="custom-select__arrow">
+												<img src="./img/icons/arrow-down.svg" alt="" />
+											</span>
+										</button>
+										<ul class="custom-select__dropdown" role="listbox" id="select-dropdown">
+											<li role="option">
+												<label for="1">Компанії</label>
+												<input type="radio" id="1" name="company" class="visually-hidden" />
+											</li>
+											<li role="option">
+												<label for="2">Курси</label>
+												<input type="radio" id="2" name="courses" class="visually-hidden" />
+											</li>
+										</ul>
+									</div>
+									<div class="custom-select" id="selectLocation">
+										<button
+											class="custom-select__button"
+											role="combobox"
+											aria-label="select button"
+											aria-haspopup="listbox"
+											aria-expanded="false"
+											aria-controls="select-dropdown"
+											type="button"
+										>
+											<span class="custom-select__value ">Всі локації</span>
+											<span class="custom-select__arrow">
+												<img src="./img/icons/arrow-down.svg" alt="" />
+											</span>
+										</button>
+										<ul class="custom-select__dropdown" role="listbox" id="select-dropdown">
+											<li role="option">
+												<label for="3">Компанії</label>
+												<input type="radio" id="3" name="social-account" class="visually-hidden" />
+											</li>
+											<li role="option">
+												<label for="4">Курси</label>
+												<input type="radio" id="4" name="social-account" class="visually-hidden" />
+											</li>
+										</ul>
+									</div>
+									<div class="custom-select" id="selectAllCompany">
+										<button
+											class="custom-select__button"
+											role="combobox"
+											aria-label="select button"
+											aria-haspopup="listbox"
+											aria-expanded="false"
+											aria-controls="select-dropdown"
+											type="button"
+										>
+											<span class="custom-select__value ">Всі компанії</span>
+											<span class="custom-select__arrow">
+												<img src="./img/icons/arrow-down.svg" alt="" />
+											</span>
+										</button>
+										<ul class="custom-select__dropdown" role="listbox" id="select-dropdown">
+											<li role="option">
+												<label for="5">Компанії</label>
+												<input type="radio" id="5" name="social-account" class="visually-hidden" />
+											</li>
+											<li role="option">
+												<label for="6">Курси</label>
+												<input type="radio" id="6" name="social-account" class="visually-hidden" />
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="search-panel__button button button--color-2">Знайти</button>
+						</form>
+					</search>
+				</div>
+			</section>
+			<section class="section container">
+				<header class="section__header">
+					<h2 class="section__title">ТОП Компанії</h2>
+					<a href="#!" class="section__button button-transparent hidden-mobile">Дивитись всі <img src="./img/icons/arrow-right.svg" alt=""/></a>
+					<a href="#!" class="section__button button-round visible-mobile"><img src="./img/icons/arrow-right.svg" alt=""/></a>
+				</header>
+				<div class="section__body">
+					<div class="top-company">
+						<ul class="top-company__list grid">
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" width="144" height="76" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+							<li class="top-company__item">
+								<article class="card-alt border card-alt--hover-1">
+									<header class="card-alt__feedback">
+										<div class="card-alt__reviews">56 відгуків</div>
+										<div class="card-alt__rating">
+											<div class="card-alt__rating-stars">
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-full.svg" alt="" class="card-alt__rating-star" />
+												<img src="./img/icons/star-empty.svg" alt="" class="card-alt__rating-star" />
+											</div>
+											<div class="card-alt__rating-grade">(3,8)</div>
+										</div>
+									</header>
+									<div class="card-alt__body">
+										<picture>
+											<source srcset="./img/top-company/1.webp 1x, ./img/top-company/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-company/1.jpg 1x, ./img/top-company/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-company/1.jpg" alt="Lemon school it-школа" class="card-alt__logo" />
+										</picture>
+										<h4 class="card-alt__title">Name of&#160;company.<br />Name of&#160;company.</h4>
+									</div>
+									<a href="#!" class="card-alt__link"></a>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="section container">
+				<div class="new-courses">
+					<header class="section__header">
+						<h2 class="section__title">Нещодавно додані курси</h2>
+						<a href="#!" class="section__button button-transparent hidden-mobile">Дивитись всі <img src="./img/icons/arrow-right.svg" alt=""/></a>
+						<a href="#!" class="section__button button-round visible-mobile"><img src="./img/icons/arrow-right.svg" alt=""/></a>
+					</header>
+					<div class="section__body">
+						<ul class="new-courses__list grid">
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="new-courses__item">
+								<article class="card card--shadow-1 card--hover-1">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="82" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="section container">
+				<header class="section__header">
+					<h2 class="section__title">ТОП Курси</h2>
+					<a href="#!" class="section__button button-transparent hidden-mobile">Дивитись всі <img src="./img/icons/arrow-right.svg" alt=""/></a>
+					<a href="#!" class="section__button button-round visible-mobile"><img src="./img/icons/arrow-right.svg" alt=""/></a>
+				</header>
+				<div class="section__body">
+					<div class="top-courses">
+						<ul class="top-courses__list grid">
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+							<li class="top-courses__item">
+								<article class="card border card--shadow-2 card--transparent card--hover-2">
+									<header class="card__header">
+										<picture>
+											<source srcset="./img/top-courses/1.webp 1x, ./img/top-courses/1@2x.webp 2x" type="image/webp" />
+											<source srcset="./img/top-courses/1.jpg 1x, ./img/top-courses/1@2x.jpg 2x" type="image/jpeg" />
+											<img src="./img/top-courses/1.jpg" alt="yappi business" class="card__header-img" width="98" height="52" />
+										</picture>
+										<div class="card__feedback">
+											<div class="card__rating">
+												<div class="card__rating-stars">
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-full.svg" alt="" class="card__rating-star" />
+													<img src="./img/icons/star-empty.svg" alt="" class="card__rating-star" />
+												</div>
+												<div class="card__rating-grade">(3,8)</div>
+											</div>
+											<div class="card__reviews">56 відгуків</div>
+										</div>
+									</header>
+									<div class="card__body">
+										<h4 class="card__title">Name of&#160;company. Name of&#160;company Name of&#160;company</h4>
+									</div>
+									<a href="#!" class="card__link"></a>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="section container">
+				<div class="add-company">
+					<div class="add-company__body">
+						<h2 class="add-company__title">Не&#160;знайшли <span>свою компанію?</span></h2>
+						<div class="add-company__descr h4">
+							<p>Зв&#8217;яжіться з&#160;нами щоб додати вашу компанію і отримувати чесні відгуки.</p>
+						</div>
+					</div>
+					<form action="" class="add-company__form add-company-form">
+						<h3 class="add-company-form__title">Додати компанію</h3>
+						<div class="add-company-form__body">
+							<div class="add-company-form__field">
+								<label for="name" class="add-company-form__label h4">Назва компанії</label>
+								<input type="text" name="name" id="name" class="add-company-form__input" placeholder="Введіть назву компанії" inputmode="text" />
+							</div>
+							<div class="add-company-form__field">
+								<label for="email" class="add-company-form__label h4">Електронна адреса</label>
+								<input type="email" name="email" id="email" class="add-company-form__input" placeholder="example@gmail.com" inputmode="email" />
+							</div>
+						</div>
+						<button type="submit" class="add-company-form__button button button--color-2">Зв&#8217;язатися</button>
+					</form>
+				</div>
+			</section>
+			<section class="section container">
+				<header class="section__header section__header--alt">
+					<h2 class="section__title section__title--alt">FAQ</h2>
+				</header>
+				<div class="section__body">
+					<div class="faq">
+						<ul class="faq__list grid">
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">Are refugees leaving pets behind?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">How can we&#160;support refugee families and their pets?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">What resources are available for refugees with pets?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">Are there organizations helping refugees care for their pets?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">What challenges do&#160;refugees face in&#160;bringing their pets with them?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">Do&#160;refugee shelters accommodate pets as&#160;well?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">How can we&#160;ensure refugee pets receive proper care during migration?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__accordion">
+									<summary class="faq__accordion-header">
+										<h4 class="faq__accordion-title">What role do&#160;pets play in&#160;the lives of&#160;refugees seeking asylum?</h4>
+										<span class="faq__accordion-indicator"></span>
+									</summary>
+									<div class="faq__accordion-body">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Eu&#160;et&#160;consectetur risus ac&#160;egestas nisi accumsan purus amet. Adipiscing nulla
+											tristique bibendum at&#160;posuere quam integer aenean nisi. Sed duis mauris aliquet ut&#160;hendrerit at&#160;vitae mi&#160;venenatis.
+											Tellus dictum malesuada diam integer malesuada massa elit sollicitudin rutrum.
+										</p>
+									</div>
+								</details>
+							</li>
+						</ul>
+						<a href="#!" class="faq__button button-transparent hidden-mobile">Дивитись всі <img src="./img/icons/arrow-right.svg" alt=""/></a>
+						<a href="#!" class="section__button button-round visible-mobile"><img src="./img/icons/arrow-right.svg" alt=""/></a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__main container">
+				<div class="footer__inner">
+					<div class="footer__info">
+						<a href="#!" class="footer__logo">
+							<img src="./img/logo-light.svg" class="logo__image" alt="Reviewed" width="192" height="40" loading="lazy" />
+						</a>
+						<div class="footer__contact">
+							<h2 class="footer__contact-title">Контакти технічної підтримки</h2>
+							<address class="footer__contact-body">
+								<a href="tel:380674646575" class="h4">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
+											stroke="#FAFAFA"
+											stroke-width="1.5"
+											stroke-miterlimit="10"
+										/>
+									</svg>
+									+380674646575</a
+								>
+								<a href="mailto:reviewed@gmail.com" class="h4">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+											stroke="#FAFAFA"
+											stroke-width="1.5"
+											stroke-miterlimit="10"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9"
+											stroke="#FAFAFA"
+											stroke-width="1.5"
+											stroke-miterlimit="10"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+									reviewed@gmail.com</a
+								>
+							</address>
+						</div>
+					</div>
+					<div class="footer__courses">
+						<h2 class="footer__courses-title">Курси</h2>
+						<nav class="footer__courses-nav">
+							<ul class="footer__courses-list footer-list">
+								<li class="footer__courses-item">
+									<a href="#!" class="footer__courses-link">Всі курси</a>
+								</li>
+								<li class="footer__courses-item">
+									<a href="#!" class="footer__courses-link">ТОП курси</a>
+								</li>
+								<li class="footer__courses-item">
+									<a href="#!" class="footer__courses-link">Нещодавно додані курси</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__company">
+						<h2 class="footer__company-title">Компанії</h2>
+						<nav class="footer__company-nav">
+							<ul class="footer__company-list footer-list">
+								<li class="footer__company-item">
+									<a href="#!" class="footer__company-link">Всі компанії</a>
+								</li>
+								<li class="footer__company-item">
+									<a href="#!" class="footer__company-link">ТОП компанії</a>
+								</li>
+								<li class="footer__company-item">
+									<a href="#!" class="footer__company-link">Нещодавно додані компанії</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__soc1al-other">
+						<div class="footer__soc1al">
+							<h2 class="footer__soc1al-title">Ми&#160;в&#160;соц.мережах</h2>
+							<nav class="footer__soc1al-icons-nav">
+								<ul class="footer__soc1al-icons-list">
+									<li class="footer__soc1al-icons-item">
+										<a href="#!" class="footer__soc1al-icon-link">
+											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M8.44484 23.5559V12.9782M29.6004 9.95595V22.0448C29.6004 24.0487 28.8044 25.9705 27.3874 27.3874C25.9705 28.8044 24.0487 29.6004 22.0448 29.6004H9.95595C7.95209 29.6004 6.0303 28.8044 4.61336 27.3874C3.19642 25.9705 2.40039 24.0487 2.40039 22.0448V9.95595C2.40039 7.95209 3.19642 6.0303 4.61336 4.61336C6.0303 3.19642 7.95209 2.40039 9.95595 2.40039H22.0448C24.0487 2.40039 25.9705 3.19642 27.3874 4.61336C28.8044 6.0303 29.6004 7.95209 29.6004 9.95595Z"
+													stroke="#FAFAFA"
+													stroke-width="1.59375"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+												<path
+													d="M14.4898 23.556V18.6449M14.4898 18.6449V12.9782M14.4898 18.6449C14.4898 12.9782 23.5564 12.9782 23.5564 18.6449V23.556M8.44531 8.45998L8.46042 8.44336"
+													stroke="#FAFAFA"
+													stroke-width="1.59375"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</a>
+									</li>
+									<li class="footer__soc1al-icons-item">
+										<a href="#!" class="footer__soc1al-icon-link">
+											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M18.6667 12.4V16.2667H22.1333C22.4 16.2667 22.5333 16.5333 22.5333 16.8L22 19.3333C22 19.4667 21.7333 19.6 21.6 19.6H18.6667V29.3333H14.6667V19.7333H12.4C12.1333 19.7333 12 19.6 12 19.3333V16.8C12 16.5333 12.1333 16.4 12.4 16.4H14.6667V12C14.6667 9.73333 16.4 8 18.6667 8H22.2667C22.5333 8 22.6667 8.13333 22.6667 8.4V11.6C22.6667 11.8667 22.5333 12 22.2667 12H19.0667C18.8 12 18.6667 12.1333 18.6667 12.4Z"
+													stroke="#FAFAFA"
+													stroke-width="1.5"
+													stroke-miterlimit="10"
+													stroke-linecap="round"
+												/>
+												<path
+													d="M19.9993 29.3337H11.9993C5.33268 29.3337 2.66602 26.667 2.66602 20.0003V12.0003C2.66602 5.33366 5.33268 2.66699 11.9993 2.66699H19.9993C26.666 2.66699 29.3327 5.33366 29.3327 12.0003V20.0003C29.3327 26.667 26.666 29.3337 19.9993 29.3337Z"
+													stroke="#FAFAFA"
+													stroke-width="1.5"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</a>
+									</li>
+									<li class="footer__soc1al-icons-item">
+										<a href="#!" class="footer__soc1al-icon-link">
+											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M22.666 26.6663H9.33268C5.33268 26.6663 2.66602 23.9997 2.66602 19.9997V11.9997C2.66602 7.99967 5.33268 5.33301 9.33268 5.33301H22.666C26.666 5.33301 29.3327 7.99967 29.3327 11.9997V19.9997C29.3327 23.9997 26.666 26.6663 22.666 26.6663Z"
+													stroke="#FAFAFA"
+													stroke-width="1.5"
+													stroke-miterlimit="10"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+												<path
+													d="M15.2008 12.6664L18.5341 14.6664C19.7341 15.4664 19.7341 16.6664 18.5341 17.4664L15.2008 19.4664C13.8674 20.2664 12.8008 19.5998 12.8008 18.1331V14.1331C12.8008 12.3998 13.8674 11.8664 15.2008 12.6664Z"
+													stroke="#FAFAFA"
+													stroke-width="1.5"
+													stroke-miterlimit="10"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</a>
+									</li>
+									<li class="footer__soc1al-icons-item">
+										<a href="#!" class="footer__soc1al-icon-link">
+											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M7.33325 2.66699H5.46659C4.13325 2.66699 3.46659 4.13366 4.39992 5.06699L11.9999 12.667C14.1333 14.8003 17.7333 14.8003 19.8666 12.667L27.4666 5.06699C28.5333 4.13366 27.8666 2.66699 26.5333 2.66699H24.6666C23.5999 2.66699 22.5333 3.06699 21.7333 3.86699L16.9333 8.66699C16.3999 9.20033 15.4666 9.20033 14.9333 8.66699L10.2666 3.86699C9.46659 3.06699 8.39992 2.66699 7.33325 2.66699Z"
+													stroke="#FAFAFA"
+													stroke-width="1.5"
+													stroke-miterlimit="10"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+												<path
+													d="M7.33339 29.3334H5.46672C4.26672 29.3334 3.60006 27.8667 4.53339 26.9334L12.0001 19.3334C14.1334 17.2001 17.7334 17.2001 19.8667 19.3334L27.4667 26.9334C28.4001 27.8667 27.7334 29.3334 26.5334 29.3334H24.6667C23.6001 29.3334 22.5334 28.9334 21.7334 28.1334L16.9334 23.3334C16.4001 22.8001 15.4667 22.8001 14.9334 23.3334L10.1334 28.1334C9.46672 28.8001 8.40005 29.3334 7.33339 29.3334Z"
+													stroke="#FAFAFA"
+													stroke-width="1.5"
+													stroke-miterlimit="10"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer__other">
+							<h2 class="footer__other-title">Інше</h2>
+							<nav class="footer__other-nav">
+								<ul class="footer__other-list footer-list">
+									<li class="footer__other-item">
+										<a href="#!" class="footer__other-link">FAQ</a>
+									</li>
+									<li class="footer__other-item">
+										<a href="#!" class="footer__other-link">Політика конфіденційності</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__extra container">
+				<div class="footer__copyright">&#169; <time datetime="2024">2024</time> ReviewED. Всі права захищені</div>
+			</div>
+		</footer>
+
+		<div class="mobile-overlay visible-mobile" id="mobileOverlay" role="dialog" aria-hidden="true">
+			<div class="mobile-overlay__close-button-wrapper">
+				<button class="mobile-overlay__close-button cross-button" type="button" id="closeMobileMenuBtn">
+					<span class="visually-hidden">Close navigation menu</span>
+				</button>
+			</div>
+			<div class="mobile-overlay__body">
+				<div class="mobile-overlay__search-list">
+					<search class="mobile-overlay__search" role="search">
+						<form class="mobile-overlay__search-form">
+							<div class="field-search">
+								<input name="search" id="search" type="search" placeholder="Пошук" class="header__search-input field-search__input" />
+							</div>
+						</form>
+					</search>
+					<ul class="mobile-overlay__list">
+						<li class="mobile-overlay__item">
+							<a class="mobile-overlay__link" href="#!">Курси</a>
+						</li>
+						<li class="mobile-overlay__item">
+							<a class="mobile-overlay__link" href="#!">Компанії</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#!" class="mobile-overlay__button button-transparent">Вхід</a>
+			</div>
+		</div>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

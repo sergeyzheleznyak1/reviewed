@@ -1,0 +1,20 @@
+.section {
+    padding-block: var(--section-padding-y);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--section-padding-y);
+
+        &--alt {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        &--alt {
+            text-transform: uppercase;
+        }
+    }
+}

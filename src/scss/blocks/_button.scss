@@ -1,0 +1,34 @@
+.button {
+    @include flex-center(true);
+
+    height: 50px;
+    padding-inline: 60.5px;
+    column-gap: 4px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--color-zinc-950);
+    border-radius: var(--border-radius-extra-large);
+    box-shadow: var(--shadow-3);
+
+    &--color-1 {
+        background-color: var(--color-yellow-300);
+    }
+
+    &--color-2 {
+        background-color: var(--color-yellow-500);
+
+        @include hover {
+            background-color: var(--color-yellow-300);
+        }
+    }
+
+    &--color-3 {
+        background-color: var(--color-yellow-600);
+    }
+
+    img {
+        width: 24px;
+        aspect-ratio: 1;
+    }
+}

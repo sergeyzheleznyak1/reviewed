@@ -1,0 +1,13 @@
+.top-courses {
+    &__list {
+        --grid-columns: 4;
+
+        @include tablet-b {
+            --grid-columns: 2;
+        }
+
+        @include mobile {
+            --grid-columns: 1;
+        }
+    }
+}
