@@ -2,7 +2,7 @@
     &__list {
         --grid-columns: 4;
 
-        @include tablet-b {
+        @include desktop {
             --grid-columns: 2;
         }
 
